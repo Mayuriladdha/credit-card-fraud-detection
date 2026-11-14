@@ -67,7 +67,7 @@ Handling the imbalance raised PR-AUC from 0.74 to 0.94.
 | False alarms | 920 of 553,574 genuine transactions (0.17%) |
 | Fraud value stopped | $1.10M of $1.13M |
 
-![Test results](images/fig_test.png)
+
 
 ### Choosing the threshold
 
@@ -82,13 +82,11 @@ The threshold trades missed fraud against false alarms, so it is a business deci
 
 The default is the F1-optimal threshold, which suits the goal of keeping the experience smooth for genuine customers. The security-first threshold comes from a cost model in which a missed fraud costs its full amount and a false alarm costs $10 (an adjustable assumption).
 
-![Threshold selection](images/fig_threshold.png)
 
 ### What drives the model
 
 Transaction amount, merchant category (grocery, gas), hour of day, customer age and the amount relative to the card's usual spend are the strongest signals.
 
-![Feature importance](images/fig_importance.png)
 
 ## Project structure
 
